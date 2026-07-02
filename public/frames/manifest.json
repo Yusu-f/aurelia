@@ -1,0 +1,5 @@
+{
+  "hero": {"count": 121, "pattern": "frames/hero/f_%04d.jpg"},
+  "dome": {"count": 121, "pattern": "frames/dome/f_%04d.jpg"},
+  "cabin": {"count": 121, "pattern": "frames/cabin/f_%04d.jpg"}
+}
