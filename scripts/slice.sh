@@ -8,14 +8,14 @@ WIDTH=1600
 FPS=24
 QUALITY=3
 
-MANIFEST="public/frames/manifest.json"
-mkdir -p public/frames
+MANIFEST="frames/manifest.json"
+mkdir -p frames
 printf '{\n' > "$MANIFEST"
 
 first=1
 for src in raw/hero-4k.mp4 raw/dome-4k.mp4 raw/cabin-4k.mp4; do
   name=$(basename "$src" | sed 's/-4k\.mp4//')
-  out="public/frames/$name"
+  out="frames/$name"
   rm -rf "$out"
   mkdir -p "$out"
   ffmpeg -v error -i "$src" -vf "fps=$FPS,scale=$WIDTH:-2" -q:v $QUALITY "$out/f_%04d.jpg" -y
